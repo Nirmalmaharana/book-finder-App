@@ -30,7 +30,7 @@ function BookFinder() {
         `https://openlibrary.org/search.json?title=${query}`
       );
       const data = await res.json();
-      setResults(data.docs.slice(0, 12)); // Limit results
+      setResults(data.docs); // Limit results
     } catch (e) {
       console.error("Error fetching books", e);
     }
